@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google</title>
+        <Style>
+                *{
+                        background-color: white;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                .Google{
+                        font-size: 100px;
+                        font-weight: inherit;
+                        margin: auto;
+                        padding: auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 75vh;
+                }
+
+                form{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin: auto;
+                        padding: auto;
+                }
+
+                input[type="text"]{
+                        width: 300px;
+                        height: 30px;
+                        border-radius: 5px;
+                        border: 1px solid black;
+                        margin: 10px;
+                        padding: 10px;
+                }
+
+                input[type="submit"]{
+                        width: 100px;
+                        height: 30px;
+                        border-radius: 5px;
+                        border: 1px solid black;
+                        margin: 10px;
+                        padding: 5px;
+                        background-color: blue;
+                        color: white;
+                }
+
+                input[type="submit"]:hover{
+                        background-color: darkblue;
+                }
+        </Style>
+
+</head>
+<body>
+        <div class="Google">
+                <span style="color: blue;">G</span>
+                <span style="color: red;">o</span>
+                <span style="color: yellow;">o</span>
+                <span style="color: blue;">g</span>
+                <span style="color: green;">l</span>
+                <span style="color: red;">e</span>
+        </div>
+
+        <form action="https://www.google.com/search" method="get">
+                <input type="text" name="q" placeholder="Search Google">
+                <input type="submit" value="Search">
+        </form>
+</body>
+</html>
