@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Display changes made
+      run: |
+        echo "Cambios realizados: $(date)"
+        echo "Mensaje del último commit: $(git log -1 --pretty=%B)"
+        echo "Autor del último commit: $(git log -1 --pretty=%an)"
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-web-app:latest
